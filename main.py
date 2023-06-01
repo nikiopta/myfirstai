@@ -10,8 +10,10 @@ model = keras.Sequential([
     keras.Input((28, 28, 1)),
     layers.Conv2D(16, 3, activation="relu"),
     layers.MaxPooling2D(),
+    layers.Dropout(0.25),
     layers.Conv2D(32, 3, activation="relu"),
     layers.MaxPooling2D(),
+    layers.Dropout(0.25),
     layers.Flatten(),
     layers.Dense(10, activation="softmax")
 ])
