@@ -26,4 +26,4 @@ model.compile(
 #model = keras.models.load_model("saved_model")
 print(model.summary())
 model.fit(x_train, y_train, batch_size=64, epochs=1, callbacks=[keras.callbacks.ModelCheckpoint("saved_model")],)
-model.evaluate(x_test, y_test, callbacks=[keras.callbacks.ModelCheckpoint("saved_model")])
+model.evaluate(x_test, y_test)
