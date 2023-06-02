@@ -16,14 +16,14 @@ model = keras.Sequential([
     layers.Dropout(0.25),
     layers.Flatten(),
     layers.Dense(10, activation="softmax")
-])
+    ])
 
 model.compile(
     loss=keras.losses.SparseCategoricalCrossentropy(from_logits=True),
-    optimizer=keras.optimizers.Adam(learning_rate=0.01),
+    optimizer=keras.optimizers.Adam(),
     metrics=["accuracy"]
 )
 model = keras.models.load_model("saved_model")
 print(model.summary())
-model.fit(x_train, y_train, batch_size=64, epochs=1, callbacks=[keras.callbacks.ModelCheckpoint("saved_model")],)
+model.fit(x_train, y_train, batch_size=64, epochs=1, callbacks=[keras.callbacks.ModelCheckpoint("saved_model")])
 model.evaluate(x_test, y_test)
