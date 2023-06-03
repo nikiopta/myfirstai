@@ -28,7 +28,7 @@ def upload_image():
         # Print the predicted class
         print("Predicted class:", predicted_class)
 
-#
+
 # Function to preprocess the image
 def preprocess_image(image):
     # Preprocess the image as needed (e.g., resize, normalization, etc.)
