@@ -1,7 +1,7 @@
 import tensorflow as tf
 from tensorflow import keras
 from keras import layers
-tf.keras.datasets.mnist.load_data(path="mnist.npz")
+tf.keras.datasets.mnist.load_data(path="mnist.npz"
 
 (x_train, y_train), (x_test, y_test) = tf.keras.datasets.mnist.load_data()
 x_train = x_train.astype("float32") / 255.0
